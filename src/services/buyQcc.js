@@ -32,7 +32,7 @@ async function buyQCC(quantity) {
       return false;
     }
   } catch (error) {
-    console.error('에러 발생:', error.response?.data || error.message);
+    console.error('에러 발생:', error.response ? error.response.data : error.message);
     return false;
   }
 }
